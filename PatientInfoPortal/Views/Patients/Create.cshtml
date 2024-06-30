@@ -1,0 +1,42 @@
+﻿@model PatientInformation
+
+<h1>Create</h1>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DateOfBirth"></label>
+        <input asp-for="DateOfBirth" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="DiseaseInformationID"></label>
+        <select asp-for="DiseaseInformationID" class="form-control" asp-items="ViewBag.Diseases">
+            <option value="">-- Select Disease --</option>
+        </select>
+    </div>
+@*      <div class="form-group">
+         <label asp-for="EpilepsyStatus"></label>
+         <select asp-for="EpilepsyStatus" class="form-control">
+             <option value="Type1">Type 1</option>
+             <option value="Type2">Type 2</option>
+             <option value="Type3">Type 3</option>
+         </select>
+     </div> *@
+    <div class="form-group">
+        <label asp-for="NCDID"></label>
+        <select asp-for="NCDID" class="form-control" asp-items="ViewBag.NCDs">
+            <option value="">-- Select NCD --</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label asp-for="AllergiesID"></label>
+        <select asp-for="AllergiesID" class="form-control" asp-items="ViewBag.Allergies">
+            <option value="">-- Select Allergy --</option>
+        </select>
+    </div>
+    <button type="submit" value="Create" class="btn btn-primary">Save</button>
+    <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+</form>
