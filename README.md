@@ -27,9 +27,8 @@ This project demonstrates a basic CRUD (Create, Read, Update, Delete) applicatio
 
 1. Clone the Repository
 
-git clone https://github.com/yourusername/PatientInfoPortal.git
-
-cd PatientInfoPortal
+git clone 
+cd 
 
 2. Set Up the Database
    
